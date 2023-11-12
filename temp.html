@@ -1,3 +1,5 @@
+<!-- To Do: fix jS!-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,31 @@
     <title>Temperature Converter </title>
 </head>
 <body>
-    
+
+ <h1> Temperature Converter</h1>
+
+  <label>
+    <p> 
+        Kelvin 
+    </p>
+
+    <input id = "kelvinInput" type = "number" placeholder = "Kelvin"
+    oninput="temperatureConverter(this.value)" onchange = "temperatureConverter(this.value)">
+
+    <p> 
+        Celcius:
+    <span id = "outputCelcius"> </span>
+
+    </p>
+  </label>
+
 </body>
+
+
+<script>
+    function temperatureConverter(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("outputCelcius").innerHTML=valNum-273.15;
+    }
+ </script>
 </html>
